@@ -1,0 +1,8 @@
+<h2>Models on the app:</h2>
+<% @models.reverse.each do |model| # load first parent classes %>
+<h3><%= model.model_name.name %></h3>
+<pre><code class="ruby">{ <%= model.columns_hash.map { |k, v| "#{k}: #{v.type}" }.join(", \n") %> }</code></pre>
+<% end %>
+
+<h2>Console:</h2>
+<% console %>
