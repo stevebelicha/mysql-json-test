@@ -1,8 +1,14 @@
 <h2>Models on the app:</h2>
+<div class="container-fluid">
 <% @models.reverse.each do |model| # load first parent classes %>
-<h3><%= model.model_name.name %></h3>
-<pre><code class="ruby">{ <%= model.columns_hash.map { |k, v| "#{k}: #{v.type}" }.join(", \n") %> }</code></pre>
+<div class="col-xs-5">
+  <h3><%= model.model_name.name %></h3>
+  <pre><code class="ruby">{ <%= model.columns_hash.map { |k, v| "#{k}: #{v.type}" }.join(", \n") %> }</code></pre>
+</div>
 <% end %>
+</div>
+
+<p><a href='https://dev.mysql.com/doc/refman/5.7/en/json.html' target='_blank'>Reference for MySQL JSON fields</a></p>
 
 <h2>Console:</h2>
 <% console %>
