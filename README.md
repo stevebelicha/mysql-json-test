@@ -3,6 +3,8 @@ MySQL JSON Field Test
 
 Playground to check how JSON fields work. It shows a console in the index view.
 
+![Screenshot](./public/screenshot.png)
+
 ## Dependencies
 - MySQL > 5.7.8 (JSON Fields needed)
 
